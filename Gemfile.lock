@@ -205,14 +205,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara
+  capybara (~> 2.15)
   coveralls
   factory_bot_rails
   foundation-rails (~> 5.5)
   jquery-rails
   launchy
   listen
-  pg (~> 0.18)
+  pg (~> 0.21)
   pry-rails
   puma
   rails (~> 5.1.4)

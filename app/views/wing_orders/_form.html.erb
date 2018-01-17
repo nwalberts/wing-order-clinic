@@ -1,0 +1,36 @@
+<%= form_for(@wing_order) do |f| %>
+<div class="field">
+  <%= f.label :customer_name, "Full Name" %>
+  <%= f.text_field :customer_name %>
+</div>
+
+<div class="field">
+  <%= f.label(:city, "City") %>
+  <%= f.text_field :city %>
+</div>
+
+<div class="field">
+  <%= f.label :state, "State" %>
+  <%= f.select(:state, options_for_select(@state_collection)) %>
+</div>
+
+<div class="field">
+  <%= f.label :quantity, "Quantity" %>
+  <%= f.collection_radio_buttons :quantity, @quantity_collection, :first, :last %>
+</div>
+
+<div class="field">
+  <%= f.label :ranch_dressing, "Add Ranch Dressing" %>
+  <%= f.check_box :ranch_dressing %>
+</div>
+
+<div class="field">
+  <%= f.label :flavor_ids, "Flavor Ids" %>
+  <%= f.collection_check_boxes :flavor_ids, @flavor_collection, :id, :name %>
+</div>
+
+<div class="field">
+  <%= f.submit "Place Order" %>
+</div>
+
+<% end %>
